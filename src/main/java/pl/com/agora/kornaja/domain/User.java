@@ -20,6 +20,8 @@ public class User {
     @Column(nullable = false)
     private String password;
 
+    private Integer age;
+
     @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinTable(name = "user__user_group",
             joinColumns = @JoinColumn(name = "user_id", nullable = false, updatable = false),
@@ -68,6 +70,14 @@ public class User {
     public User setPassword(String password) {
         this.password = password;
         return this;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
     }
 
     public List<Task> getTasks() {

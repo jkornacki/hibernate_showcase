@@ -11,6 +11,15 @@ public class UserAdress {
     private String city;
     private String zipCode;
 
+    @Override
+    public String toString() {
+        return "UserAdress{" +
+                "country='" + country + '\'' +
+                ", city='" + city + '\'' +
+                ", zipCode='" + zipCode + '\'' +
+                '}';
+    }
+
     public String getCountry() {
         return country;
     }
