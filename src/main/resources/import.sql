@@ -1,0 +1,1 @@
+INSERT INTO USER(id,login,password,age) VALUES(1,'2','3',4);
