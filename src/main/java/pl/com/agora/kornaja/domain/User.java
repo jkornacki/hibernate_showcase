@@ -25,7 +25,8 @@ public class User {
     @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinTable(name = "user__user_group",
             joinColumns = @JoinColumn(name = "user_id", nullable = false, updatable = false),
-            inverseJoinColumns = @JoinColumn(name = "user_group_id", nullable = false, updatable = false)
+            inverseJoinColumns = @JoinColumn(name = "user_group_id", nullable = false, updatable = false
+            ),uniqueConstraints = {@UniqueConstraint(columnNames = {"user_id","user_group_id"})}
     )
     private List<UserGroup> userGroups;
 
