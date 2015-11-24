@@ -38,15 +38,18 @@ public class LoadData implements CommandLineRunner {
         User user1 = new User();
         user1.setLogin("login_user1");
         user1.setPassword("password");
+        user1.setAge(14);
         UserAdress adress = new UserAdress();
         adress.setCity("1");
         adress.setCountry("1");
         user1.setAdress(adress);
 
+
         //User 2
         User user2 = new User();
         user2.setLogin("login_user2");
         user2.setPassword("password");
+        user2.setAge(28);
         UserAdress adress2 = new UserAdress();
         adress2.setCity("2");
         adress2.setCountry("2");
@@ -56,6 +59,7 @@ public class LoadData implements CommandLineRunner {
         User user3 = new User();
         user3.setLogin("login_user3");
         user3.setPassword("password");
+        user3.setAge(18);
         UserAdress adress3 = new UserAdress();
         adress3.setCity("3");
         adress3.setCountry("3");
